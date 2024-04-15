@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1>color fliper...</h1>
+<div class="btn">
+    <button onclick="col()">click</button>
+</div>
+<style>
+    body{
+        background-color: black;
+        
+    }
+    .btn{
+        padding-left: 50%;
+        padding-top: 20%;
+
+    }
+    button{
+        padding: 17px 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: rgb(255, 248, 248);
+transition: 0.7s;
+font-size: medium;
+font-style: italic;
+font-weight: bold;
+color: red;
+    }
+    h1{
+        color: red;
+        font-style: italic;
+        font-size:50;
+        font-weight: bolder;
+       letter-spacing: 10px;
+
+
+    }
+    button:hover{
+          border: 2px solid rgb(236, 50, 17);
+        border: 2px solid rgb(182, 212, 11);
+        border: 2px solid rgb(13, 179, 221);
+        border: 2px solid rgb(194, 9, 211);
+        background-color: red;
+        transition: 0.7s;
+        color: green;
+    }
+</style>
+<script>
+    let colors=['white','blue','red','green','yellow','pink']
+    let currentindex=0;
+    function col(){
+        let body=document.getElementById("body")
+        body.style.backgroundColor=colors[currentindex];
+        currentindex=(currentindex+1)%colors.length
+    }
+</script>
+</body>
+</html>
